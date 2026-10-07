@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laryngologia - MT Medic Centrum Medyczne Krosno</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#8bc4f9',
+                            400: '#60a5f2',
+                            500: '#3b8edb',
+                            600: '#2c74b8',
+                            700: '#225d94',
+                            800: '#1c4d7a',
+                            900: '#174164',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -176,17 +198,8 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 px-4 bg-blue-600 text-white text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold mb-6">Zadbaj o swoje zdrowie już dziś</h2>
-            <p class="text-blue-100 mb-10 text-lg">Zapraszamy do kontaktu w celu umówienia wizyty u naszego specjalisty.</p>
-            <a href="index.html#kontakt" class="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition shadow-xl">Umów wizytę</a>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer id="kontakt" class="bg-slate-900 text-white pt-24 pb-12 px-4">
+    <footer id="kontakt" class="bg-slate-800 text-white pt-24 pb-12 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-12 mb-16">
                 <div>
