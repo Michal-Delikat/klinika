@@ -37,8 +37,8 @@ class MainNav extends HTMLElement {
                 <div class="max-w-7xl mx-auto flex justify-between items-center">
                     <div class="flex items-center gap-3">
                         <a href="${rootPrefix}index.html" class="flex items-center gap-3">
-                            <img src="${rootPrefix}assets/images/logo.png" alt="MT Medic Logo" class="h-10 w-auto">
-                            <span class="font-light text-2xl tracking-tighter text-slate-900 scale-y-110 origin-bottom">Medic <span class="text-premium-accent font-medium">Centrum Medyczne</span></span>
+                            <img src="${rootPrefix}assets/images/logo.png" alt="MT Medic Logo" class="h-16 w-auto">
+                            <span class="font-light text-2xl tracking-tighter text-slate-900 scale-y-110 origin-bottom">MT Medic</span>
                         </a>
                     </div>
                     <div class="hidden lg:flex items-center gap-6 font-medium text-slate-600">
@@ -49,14 +49,30 @@ class MainNav extends HTMLElement {
                         <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-premium-accent transition">Punkt pobrań</a>
                         <a href="${rootPrefix}index.html#kontakt" class="bg-premium-accent text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition">Kontakt</a>
                     </div>
-                    <button class="lg:hidden p-2 text-slate-600">
+                    <button id="mobile-menu-button" class="lg:hidden p-2 text-slate-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 p-4 flex flex-col gap-4 font-medium text-slate-600 shadow-xl">
+                    <a href="${rootPrefix}onas.html" class="hover:text-premium-accent transition">O nas</a>
+                    <a href="${rootPrefix}index.html#specjalnosci-list" class="hover:text-premium-accent transition">Specjalności</a>
+                    <a href="${rootPrefix}index.html#wyroby" class="hover:text-premium-accent transition">Wyroby Medyczne</a>
+                    <a href="${rootPrefix}index.html#stomatologia" class="hover:text-premium-accent transition">Stomatologia</a>
+                    <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-premium-accent transition">Punkt pobrań</a>
+                    <a href="${rootPrefix}index.html#kontakt" class="bg-premium-accent text-white px-4 py-2 rounded-full text-center hover:bg-opacity-90 transition">Kontakt</a>
+                </div>
             </nav>
         `;
+
+        const btn = this.querySelector('#mobile-menu-button');
+        const menu = this.querySelector('#mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
     }
 }
 
@@ -98,6 +114,12 @@ class MainFooter extends HTMLElement {
                                 <li><a href="${rootPrefix}index.html#wyroby" class="hover:text-white transition">Wyroby medyczne</a></li>
                             </ul>
                         </div>
+                        <div>
+                            <h4 class="text-lg font-bold mb-6">Zewnętrzne linki</h4>
+                            <ul class="space-y-4 text-slate-400">
+                                <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
                         <p>© 2026 MT MEDIC. Wszelkie prawa zastrzeżone. Kopiowanie treści zabronione.</p>
@@ -109,4 +131,27 @@ class MainFooter extends HTMLElement {
 }
 
 customElements.define('main-footer', MainFooter);
+
+class DoctorCard extends HTMLElement {
+    connectedCallback() {
+        const name = this.getAttribute('name');
+        const specialty = this.getAttribute('specialty');
+        const image = this.getAttribute('image');
+
+        this.innerHTML = `
+            <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                <div class="w-32 h-32 rounded-2xl overflow-hidden shrink-0 bg-slate-100 flex items-center justify-center relative">
+                    <img src="${image}" alt="${name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium text-slate-900">${name}</h3>
+                    <p class="text-blue-600 font-medium">${specialty}</p>
+                </div>
+            </div>
+        `;
+    }
+}
+
+customElements.define('doctor-card', DoctorCard);
 
