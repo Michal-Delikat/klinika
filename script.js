@@ -139,14 +139,14 @@ class DoctorCard extends HTMLElement {
         const image = this.getAttribute('image');
 
         this.innerHTML = `
-            <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+            <div class="bg-white p-3 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
                 <div class="w-32 h-32 rounded-2xl overflow-hidden shrink-0 bg-slate-100 flex items-center justify-center relative">
                     <img src="${image}" alt="${name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
                 </div>
                 <div>
                     <h3 class="text-lg font-medium text-slate-900">${name}</h3>
-                    <p class="text-blue-600 font-medium">${specialty}</p>
+                    <p class="text-premium-accent font-medium">${specialty}</p>
                 </div>
             </div>
         `;
