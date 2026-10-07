@@ -10,6 +10,11 @@
             theme: {
                 extend: {
                     colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
                         blue: {
                             50: '#f0f7ff',
                             100: '#e0effe',
@@ -27,7 +32,8 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -59,17 +65,17 @@
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 py-4 px-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="assets/images/logo.png" alt="MT Medic Logo" class="h-10 w-auto">
-                <span class="font-bold text-xl tracking-tight text-slate-900">Medic <span class="text-blue-600">Centrum Medyczne</span></span>
-            </div>
+                <div class="flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="MT Medic Logo" class="h-10 w-auto">
+                    <span class="font-light text-2xl tracking-tighter text-slate-900 scale-y-110 origin-bottom">Medic <span class="text-premium-accent font-medium">Centrum Medyczne</span></span>
+                </div>
             <div class="hidden lg:flex items-center gap-6 font-medium text-slate-600">
-                <a href="onas.html" class="hover:text-blue-600 transition">O nas</a>
-                <a href="#specjalnosci-list" class="hover:text-blue-600 transition">Specjalności</a>
-                <a href="#wyroby" class="hover:text-blue-600 transition">Wyroby Medyczne</a>
-                <a href="#stomatologia" class="hover:text-blue-600 transition">Stomatologia</a>
-                <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-blue-600 transition">Punkt pobrań</a>
-                <a href="#kontakt" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Kontakt</a>
+                <a href="onas.html" class="hover:text-premium-accent transition">O nas</a>
+                <a href="#specjalnosci-list" class="hover:text-premium-accent transition">Specjalności</a>
+                <a href="#wyroby" class="hover:text-premium-accent transition">Wyroby Medyczne</a>
+                <a href="#stomatologia" class="hover:text-premium-accent transition">Stomatologia</a>
+                <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-premium-accent transition">Punkt pobrań</a>
+                <a href="#kontakt" class="bg-premium-accent text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition">Kontakt</a>
             </div>
             <button class="lg:hidden p-2 text-slate-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,75 +86,86 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-16 pb-24 px-4 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                MT Medic Centrum Medyczne Krosno 
-            </h1>
-            <p class="text-lg text-slate-600 mb-10 max-w-3xl mx-auto">
-                Lekarze wielu specjalności w jednym miejscu. Do każdego pacjenta podchodzimy w sposób indywidualny, oferując optymalne leczenie w najwyższym standardzie.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#kontakt" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition">Umów się na wizytę</a>
-                <a href="#specjalnosci-list" class="bg-white text-blue-600 border border-blue-100 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition">Zobacz specjalności</a>
+    <section class="relative lg:pt-24 pb-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 px-4 lg:order-1 text-left">
+                <h1 class="text-3xl md:text-7xl font-medium text-slate-900 mb-6 leading-tight">
+                    MT Medic <br>
+                    <span class="text-premium-accent">Centrum Medyczne</span> <br>
+                    Krosno 
+                </h1>
+                <p class="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
+                    Lekarze wielu specjalności w jednym miejscu. Do każdego pacjenta podchodzimy w sposób indywidualny, oferując optymalne leczenie w najwyższym standardzie.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#kontakt" class="bg-premium-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-90 transition shadow-lg shadow-premium-accent/20">Umów się na wizytę</a>
+                    <a href="#specjalnosci-list" class="bg-white text-premium-accent border border-premium-accent/30 px-8 py-4 rounded-xl font-semibold hover:bg-premium-accent/5 transition">Zobacz specjalności</a>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <div class="relative z-10 border-2 border-dashed border-slate-200 w-full h-auto object-cover aspect-[4/5] lg:aspect-square flex items-center justify-center bg-slate-50">
+                    <span class="text-slate-400 font-medium italic">Miejsce na nowe zdjęcie</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="onas" class="py-24 px-4">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative">
-                <div class="absolute -top-4 -left-4 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl opacity-70"></div>
-                <img src="assets/images/hero.png" alt="Klinika" class="relative z-10 rounded-3xl shadow-2xl">
-            </div>
+    <section id="onas" class="lg:pt-24 pb-12 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-64 h-64 bg-premium-accentLight rounded-full filter blur-3xl opacity-70"></div>
+                    <div class="relative z-10 rounded-3xl border-2 border-dashed border-slate-200 w-full aspect-square flex items-center justify-center bg-slate-50">
+                        <span class="text-slate-400 font-medium italic">Miejsce na nowe zdjęcie</span>
+                    </div>
+                </div>
             <div>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">O nas</h2>
+                <h2 class="text-3xl md:text-4xl font-medium text-slate-900 mb-6">O nas</h2>
                 <div class="space-y-4 text-slate-600 leading-relaxed text-lg">
-                    <p>Klinika MT Medic jest miejscem, w którym doświadczeni specjaliści koncentrują się na zapewnieniu swoim pacjentom usług i zabiegów na najwyższym poziomie. Priorytetami w naszej działalności są komfort i bezpieczeństwo pacjenta, oraz satysfakcja z wyników leczenia./p>
+                    <p>Klinika MT Medic jest miejscem, w którym doświadczeni specjaliści koncentrują się na zapewnieniu swoim pacjentom usług i zabiegów na najwyższym poziomie. Priorytetami w naszej działalności są komfort i bezpieczeństwo pacjenta, oraz satysfakcja z wyników leczenia.</p>
                     <p>Zespół MT Medic składa się z uznanych specjalistów w dziedzinach zachowawczych i zabiegowych. Do każdego pacjenta podchodzimy w sposób indywidualny, oferując optymalne leczenie w najwyższym standardzie. Zajmujemy się leczeniem zachowawczym i operacyjnym.</p>
                     <p>Nowoczesny budynek Lecznicy, prywatne warunki oraz wysokiej jakości specjalistyczny sprzęt pozwalają na komfortowe leczenie najnowszymi technikami. Zapraszamy do zapoznania się z naszymi możliwościami oraz zespołem MT Medic.</p>
                 </div>
-                <a href="onas.html" class="inline-block mt-8 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Poznaj nasz zespół</a>
+                <a href="onas.html" class="inline-block mt-8 bg-premium-accent text-white px-6 py-3 rounded-xl font-semibold hover:bg-opacity-90 transition">Poznaj nasz zespół</a>
             </div>
         </div>
     </section>
 
     <!-- All Specialties List -->
-    <section id="specjalnosci-list" class="py-24 px-4 bg-white">
+    <section id="specjalnosci-list" class="py-24 px-4 bg-premium-dark text-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Wszystkie Specjalności</h2>
-                <p class="text-slate-600">Kompleksowa opieka medyczna w jednym miejscu</p>
+                <h2 class="text-3xl font-medium text-white mb-4">Wszystkie Specjalności</h2>
+                <p class="text-slate-300">Kompleksowa opieka medyczna w jednym miejscu</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <!-- Simplified list of all specialties from source -->
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Laryngologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Ginekologia USG 3D</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Anestezjologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Badania słuchu</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Chirurgia onkologiczna</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Chirurgia szczękowo-twarzowa</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Chirurgia naczyniowa</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Dermatologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Dietetyka</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Gastroenterologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Kolonoskopia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Gastroskopia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Hematologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Ortopedia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Pulmonologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Lecznie bezdechu i chrapania</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Psychologia i psychoterapia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Neurologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Fizjoterapia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Kardiologia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Okulistyka</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Logopedia</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Pracownia USG</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Pediatria</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Pantomogram</a>
-                    <a href="specjalnosci.html" class="p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50 transition cursor-pointer">Reumatologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Laryngologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Ginekologia USG 3D</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Anestezjologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Badania słuchu</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Chirurgia onkologiczna</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Chirurgia szczękowo-twarzowa</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Chirurgia naczyniowa</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Dermatologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Dietetyka</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Gastroenterologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Kolonoskopia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Gastroskopia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Hematologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Ortopedia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Pulmonologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Lecznie bezdechu i chrapania</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Psychologia i psychoterapia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Neurologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Fizjoterapia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Kardiologia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Okulistyka</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Logopedia</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Pracownia USG</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Pediatria</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Pantomogram</a>
+                <a href="specjalnosci.html" class="p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white">Reumatologia</a>
             </div>
         </div>
     </section>
@@ -156,33 +173,23 @@
     <!-- Punkt Pobran Section -->
     <section id="punkt-pobran" class="py-24 px-4 bg-slate-50">
         <div class="max-w-4xl mx-auto bg-white p-12 rounded-3xl border border-slate-100 shadow-sm text-center">
-            <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-            </div>
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Punkt pobrań</h2>
+            <h2 class="text-3xl font-medium text-slate-900 mb-4">Punkt pobrań</h2>
             <p class="text-lg text-slate-600 mb-8">Zapewniamy szybką i profesjonalną obsługę pobrań materiałów do badań.</p>
-            <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Odbiór wyników badań</a>
+            <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="inline-block bg-premium-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-90 transition shadow-lg shadow-premium-accent/20">Odbiór wyników badań</a>
         </div>
     </section>
 
     <!-- Footer / Contact -->
-    <footer id="kontakt" class="bg-slate-800 text-white pt-24 pb-12 px-4">
+    <footer id="kontakt" class="bg-premium-dark text-white pt-24 pb-12 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-12 mb-16">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">MT</div>
-                        <span class="font-bold text-xl tracking-tight">Medic</span>
+                        <img src="assets/images/logo.png" alt="MT Medic Logo" class="h-32 w-auto">
                     </div>
-                    <p class="text-slate-400 leading-relaxed mb-6">
-                        Klinika MT Medic to miejsce, w którym doświadczeni specjaliści koncentrują się na zapewnieniu usług na najwyższym poziomie.
-                    </p>
                     <div class="flex items-center gap-4 mt-6">
                         <a href="https://www.facebook.com/MT-Medic-Specjalistyczna-Praktyka-Lekarska-100505914691459/" target="_blank" class="flex items-center gap-2 text-slate-400 hover:text-white transition group">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 group-hover:text-white transition" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073C24 5.445 18.182 0 12 0s-12 5.445-12 12.073C0 18.747 5.817 24 12 24s12-5.253 12-11.927zM12 .752C17.42 1.447 22 6.135 22 12.073c0 5.2-3.53 9.53-8.2 10.613-1.23.35-2.48.57-3.75.57s-2.52-.22-3.75-.57C5.53 21.6 2 17.27 2 12.073c0-5.938 4.58-10.626 10-11.321zM12 4.3C9.5 4.3 7.3 5.2 5.6 6.6l.5 1.4L8.8 6.6c1.7-.7 3.5-.7 5.2 0l1.4.5-1.9-1.4C14.7 5.2 12.5 4.3 12 4.3z"/></svg>
-                            <span class="underline underline-offset-4 decoration-slate-600 group-hover:decoration-white transition">Facebook</span>
+                            <i class="fa-brands fa-facebook social-media-icon fa-lg"></i>
                         </a>
                     </div>
                 </div>
@@ -190,15 +197,15 @@
                     <h4 class="text-lg font-bold mb-6">Kontakt</h4>
                     <ul class="space-y-4 text-slate-400">
                         <li class="flex items-start gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-premium-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                             ul. Korczyńska 43, 38-400 Krosno
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-premium-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                             (13) 433 23 00 / 537 277 266
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-premium-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                             kontakt@mtmedic.pl
                         </li>
                     </ul>

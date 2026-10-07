@@ -10,6 +10,11 @@
             theme: {
                 extend: {
                     colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
                         blue: {
                             50: '#f0f7ff',
                             100: '#e0effe',
@@ -27,7 +32,7 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -59,12 +64,12 @@
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 py-4 px-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <a href="index.html" class="flex items-center gap-3">
-                    <img src="assets/images/logo.png" alt="MT Medic Logo" class="h-10 w-auto">
-                    <span class="font-bold text-xl tracking-tight text-slate-900">Medic <span class="text-blue-600">Centrum Medyczne</span></span>
-                </a>
-            </div>
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="MT Medic Logo" class="h-10 w-auto">
+                        <span class="font-light text-2xl tracking-tighter text-slate-900 scale-y-110 origin-bottom">Medic <span class="text-premium-accent font-medium">Centrum Medyczne</span></span>
+                    </a>
+                </div>
             <div class="hidden lg:flex items-center gap-6 font-medium text-slate-600">
                 <a href="index.html#onas" class="hover:text-blue-600 transition">O nas</a>
                 <a href="index.html#specjalnosci-list" class="hover:text-blue-600 transition">Specjalności</a>
@@ -80,7 +85,7 @@
     <section class="pt-20 pb-12 px-4 text-center">
         <div class="max-w-4xl mx-auto">
             <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm mb-4 block">Zespół Ekspertów</span>
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Nasz Zespół</h1>
+            <h1 class="text-4xl md:text-5xl font-medium text-slate-900 mb-6">Nasz Zespół</h1>
             <div class="h-1 w-20 bg-blue-600 mx-auto mb-8"></div>
             <p class="text-lg text-slate-600 max-w-2xl mx-auto">
                 Do każdego pacjenta podchodzimy w sposób indywidualny, oferując opiekę najwyższej klasy specjalistów w wielu dziedzinach medycyny.
@@ -99,7 +104,7 @@
                         <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="dr n. med. Tomasz Stapiński" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-900">dr n. med. Tomasz Stapiński</h3>
+                        <h3 class="text-lg font-medium text-slate-900">dr n. med. Tomasz Stapiński</h3>
                         <p class="text-blue-600 font-medium">specjalista otorynolaryngolog</p>
                     </div>
                 </div>
@@ -110,7 +115,7 @@
                         <img src="assets/images/55b191720853af6cf19c3c33620a81d7_773ab17c2fe64718b8df0cc6c8435f4e.jpg" alt="lek. med. Mariola Stapińska" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-900">lek. med. Mariola Stapińska</h3>
+                        <h3 class="text-lg font-medium text-slate-900">lek. med. Mariola Stapińska</h3>
                         <p class="text-blue-600 font-medium">specjalista położnictwa i ginekologii</p>
                     </div>
                 </div>
