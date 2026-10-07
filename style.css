@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body { 
     font-family: 'Outfit', sans-serif; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 h1, h2, h3, .font-outfit { 
     font-family: 'Playfair Display', serif; 
     letter-spacing: -0.02em;
