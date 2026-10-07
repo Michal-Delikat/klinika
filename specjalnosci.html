@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laryngologia - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Top Bar -->
+    <div class="bg-blue-700 text-white py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
+            <div class="flex gap-4">
+                <span class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    (13) 433 23 00
+                </span>
+                <span class="hidden md:flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    537 277 266
+                </span>
+            </div>
+            <div class="hidden md:block">
+                Poniedziałek - Piątek: 8:00 - 18:00
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 py-4 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="MT Medic Logo" class="h-10 w-auto">
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Medic <span class="text-blue-600">Centrum Medyczne</span></span>
+                </a>
+            </div>
+            <div class="hidden lg:flex items-center gap-6 font-medium text-slate-600">
+                <a href="index.html#onas" class="hover:text-blue-600 transition">O nas</a>
+                <a href="index.html#specjalnosci-list" class="hover:text-blue-600 transition">Specjalności</a>
+                <a href="index.html#wyroby" class="hover:text-blue-600 transition">Wyroby Medyczne</a>
+                <a href="index.html#stomatologia" class="hover:text-blue-600 transition">Stomatologia</a>
+                <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-blue-600 transition">Punkt pobrań</a>
+                <a href="index.html#kontakt" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-20 pb-12 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm mb-4 block">Specjalności Medyczne</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Laryngologia</h1>
+            <div class="h-1 w-20 bg-blue-600 mx-auto mb-8"></div>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Profesjonalna opieka otorynolaryngologiczna, nowoczesne zabiegi operacyjne i diagnostyka w najwyższym standardzie.
+            </p>
+        </div>
+    </section>
+
+    <!-- Specialist Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-100 shadow-sm p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-48 h-48 rounded-2xl overflow-hidden shadow-lg shrink-0">
+                <img src="assets/images/laryngologia.jpg" alt="dr n. med. Tomasz Stapiński" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">dr n. med. Tomasz Stapiński</h2>
+                <p class="text-blue-600 font-medium text-lg mb-4">specjalista otorynolaryngolog</p>
+                <p class="text-slate-600 leading-relaxed">
+                    Doświadczony specjalista w dziedzinie laryngologii, koncentrujący się na nowoczesnych metodach leczenia zachowawczego i operacyjnego.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-2xl font-bold text-center text-slate-900 mb-12">Zakres Usług i Zabiegów</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Korekcja nosa i przegrody</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Rynoseptoplastyka funkcjonalna – operacja przegrody nosa i nosa zewnętrznego w celu poprawy estetyki i funkcji oddychania.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Septoplastyka</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Korekcja zniekształconej przegrody nosa dla zapewnienia prawidłowego przepływu powietrza. Element leczenia bezdechu sennego.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Konchoplastyka</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Plastyka małżowin nosowych metodą tradycyjną lub radiochirurgią „Ellman” w celu poprawy drożności nosa.
+                    </p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Operacje FESS</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Mało-inwazyjne zabiegi endoskopowe w obrębie zatok przynosowych.
+                    </p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Usuwanie torbieli zatok</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Nowoczesna metoda endoskopowa usuwania torbieli zębopochodnych z zatok szczękowych.
+                    </p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Blefaroplastyka</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Specjalistyczna plastyka powiek łącząca funkcjonalność z estetyką.
+                    </p>
+                </div>
+                <!-- Service 7 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Adenotomia</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Endoskopowe usunięcie tzw. "trzeciego migdałka" w znieczuleniu ogólnym.
+                    </p>
+                </div>
+                <!-- Service 8 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Drenaż ucha środkowego</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Leczenie wysiękowego zapalenia ucha środkowego poprzez założenie drenika wentylacyjnego.
+                    </p>
+                </div>
+                <!-- Service 9 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Leczenie chrapania i bezdechu</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Zabiegi chirurgiczne oraz radiochirurgia „Ellman” w celu eliminacji problemów z oddychaniem podczas snu.
+                    </p>
+                </div>
+                <!-- Service 10 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Usuwanie znamion i nowotworów</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Chirurgiczne usuwanie zmian skórnych twarzy z plastyką ubytku i badaniem histopatologicznym.
+                    </p>
+                </div>
+                <!-- Service 11 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Nasofiberoskopia</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Precyzyjne badanie endoskopowe trzeciego migdałka.
+                    </p>
+                </div>
+                <!-- Service 12 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Otoplastyka</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Chirurgiczna korekcja odstających lub zniekształconych małżowin usznych.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-blue-600 text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Zadbaj o swoje zdrowie już dziś</h2>
+            <p class="text-blue-100 mb-10 text-lg">Zapraszamy do kontaktu w celu umówienia wizyty u naszego specjalisty.</p>
+            <a href="index.html#kontakt" class="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition shadow-xl">Umów wizytę</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontakt" class="bg-slate-900 text-white pt-24 pb-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">MT</div>
+                        <span class="font-bold text-xl tracking-tight">Medic</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Klinika MT Medic to miejsce, w którym doświadczeni specjaliści koncentrują się na zapewnieniu usług na najwyższym poziomie.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Kontakt</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            ul. Korczyńska 43, 38-400 Krosno
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            (13) 433 23 00 / 537 277 266
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            kontakt@mtmedic.pl
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Szybkie linki</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#" class="hover:text-white transition">Polityka prywatności</a></li>
+                        <li><a href="#" class="hover:text-white transition">Standardy ochrony dzieci</a></li>
+                        <li><a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-white transition">Odbiór wyników badań</a></li>
+                        <li><a href="index.html#wyroby" class="hover:text-white transition">Wyroby medyczne</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>© 2026 MT MEDIC. Wszelkie prawa zastrzeżone. Kopiowanie treści zabronione.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

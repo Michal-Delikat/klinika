@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasz Zespół - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Top Bar -->
+    <div class="bg-blue-700 text-white py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
+            <div class="flex gap-4">
+                <span class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    (13) 433 23 00
+                </span>
+                <span class="hidden md:flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    537 277 266
+                </span>
+            </div>
+            <div class="hidden md:block">
+                Poniedziałek - Piątek: 8:00 - 18:00
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 py-4 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="MT Medic Logo" class="h-10 w-auto">
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Medic <span class="text-blue-600">Centrum Medyczne</span></span>
+                </a>
+            </div>
+            <div class="hidden lg:flex items-center gap-6 font-medium text-slate-600">
+                <a href="index.html#onas" class="hover:text-blue-600 transition">O nas</a>
+                <a href="index.html#specjalnosci-list" class="hover:text-blue-600 transition">Specjalności</a>
+                <a href="index.html#wyroby" class="hover:text-blue-600 transition">Wyroby Medyczne</a>
+                <a href="index.html#stomatologia" class="hover:text-blue-600 transition">Stomatologia</a>
+                <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-blue-600 transition">Punkt pobrań</a>
+                <a href="index.html#kontakt" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-20 pb-12 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm mb-4 block">Zespół Ekspertów</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Nasz Zespół</h1>
+            <div class="h-1 w-20 bg-blue-600 mx-auto mb-8"></div>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Do każdego pacjenta podchodzimy w sposób indywidualny, oferując opiekę najwyższej klasy specjalistów w wielu dziedzinach medycyny.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Grid -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Person 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="dr n. med. Tomasz Stapiński" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">dr n. med. Tomasz Stapiński</h3>
+                        <p class="text-blue-600 font-medium">specjalista otorynolaryngolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/55b191720853af6cf19c3c33620a81d7_773ab17c2fe64718b8df0cc6c8435f4e.jpg" alt="lek. med. Mariola Stapińska" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Mariola Stapińska</h3>
+                        <p class="text-blue-600 font-medium">specjalista położnictwa i ginekologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bf02c63cab7f44d4aba4048739aeacc5_m.png" alt="lek. med. Marcin Paczosa" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Marcin Paczosa</h3>
+                        <p class="text-blue-600 font-medium">specjalista chirurgii onkologicznej</p>
+                    </div>
+                </div>
+
+                <!-- Person 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bbe7d1caa9fed882f746cf085cded744_w.png" alt="Danuta Wojdyła" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Danuta Wojdyła</h3>
+                        <p class="text-blue-600 font-medium">pielęgniarka licencjonowana, instrumentariuszka</p>
+                    </div>
+                </div>
+
+                <!-- Person 5 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bd4ed0139040b58b38e537b9256728a2_w.png" alt="Agnieszka Knap" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Agnieszka Knap</h3>
+                        <p class="text-blue-600 font-medium">położna licencjonowana środowiskowa</p>
+                    </div>
+                </div>
+
+                <!-- Person 6 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/733471e4faead86fa0b64f7a3ff9f76e_w.png" alt="Anna Wargacka" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Anna Wargacka</h3>
+                        <p class="text-blue-600 font-medium">dietetyk kliniczny, psychodietetyk</p>
+                    </div>
+                </div>
+
+                <!-- Person 7 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bbe7d1caa9fed882f746cf085cded744_w.png" alt="lek. med. Irena Woźniak" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Irena Woźniak</h3>
+                        <p class="text-blue-600 font-medium">specjalista anestezjologii i intensywnej terapii</p>
+                    </div>
+                </div>
+
+                <!-- Person 8 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/f13e0f1836c4b4008c98c64d5d9b9096_m.png" alt="lek. med. Marcin Sokołowski" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Marcin Sokołowski</h3>
+                        <p class="text-blue-600 font-medium">specjalista anestezjologii i intensywnej terapii</p>
+                    </div>
+                </div>
+
+                <!-- Person 9 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/733471e4faead86fa0b64f7a3ff9f76e_w.png" alt="Anna Futyma" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Anna Futyma</h3>
+                        <p class="text-blue-600 font-medium">pielęgniarka anestezjologiczna</p>
+                    </div>
+                </div>
+
+                <!-- Person 10 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bbe7d1caa9fed882f746cf085cded744_w.png" alt="Małgorzata Kańtoch" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Małgorzata Kańtoch</h3>
+                        <p class="text-blue-600 font-medium">akustyk słuchu</p>
+                    </div>
+                </div>
+
+                <!-- Person 11 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bd4ed0139040b58b38e537b9256728a2_w.png" alt="Dorota Maśnik" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Dorota Maśnik</h3>
+                        <p class="text-blue-600 font-medium">akustyk słuchu</p>
+                    </div>
+                </div>
+
+                <!-- Person 12 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/3717cf8a887ff80f24b7b31fce9bb0de_20250626_101150min.jpg" alt="dr n. med. Paweł Królik" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">dr n. med. Paweł Królik</h3>
+                        <p class="text-blue-600 font-medium">specjalista reumatologii, geriatrii, chorób wewnętrznych</p>
+                    </div>
+                </div>
+
+                <!-- Person 13 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bbe7d1caa9fed882f746cf085cded744_w.png" alt="LEK. MED. Anna Rajchel" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Anna Rajchel</h3>
+                        <p class="text-blue-600 font-medium">specjalista dermatologii i wenerologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 14 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bd4ed0139040b58b38e537b9256728a2_w.png" alt="lek. med. Beata Hanus" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Beata Hanus</h3>
+                        <p class="text-blue-600 font-medium">specjalista chorób wewnętrznych, gastroenterolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 15 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bf02c63cab7f44d4aba4048739aeacc5_m.png" alt="DR N. MED. RAFAŁ SMOLIŃSKI" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">dr n. med. Rafał Smoliński</h3>
+                        <p class="text-blue-600 font-medium">specjalista chorób wewnętrznych, gastroenterolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 16 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="dr n. med. Jacek Krzanowski" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">dr n. med. Jacek Krzanowski</h3>
+                        <p class="text-blue-600 font-medium">specjalista chorób wewnętrznych, hematolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 17 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/c69cf025b2a6739651f148a0a7968b96_w.png" alt="lek. med. Agnieszka Skrupska-Stefaniak" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Agnieszka Skrupska-Stefaniak</h3>
+                        <p class="text-blue-600 font-medium">specjalista chorób wewnętrznych, chorób płuc</p>
+                    </div>
+                </div>
+
+                <!-- Person 18 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/bf02c63cab7f44d4aba4048739aeacc5_m.png" alt="LEK. MED. GRZEGORZ KUMIEGA" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Grzegorz Kumiega</h3>
+                        <p class="text-blue-600 font-medium">specjalista chorób wewnętrznych</p>
+                    </div>
+                </div>
+
+                <!-- Person 19 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/0c84c71d63e9380d175fee95ebc6876e_w.png" alt="lek. med. Katarzyna Krzanowska" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Katarzyna Krzanowska</h3>
+                        <p class="text-blue-600 font-medium">specjalista neurolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 20 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/5ce5041352fc058a352d33ccb48a7c3a_w.png" alt="mgr Sabina Midura" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">mgr Sabina Midura</h3>
+                        <p class="text-blue-600 font-medium">logopeda kliniczny</p>
+                    </div>
+                </div>
+
+                <!-- Person 21 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/847da67fd6c44a2f38d75f8e2dc4e78b_1.png" alt="mgr Kamil Stasz" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">mgr Kamil Stasz</h3>
+                        <p class="text-blue-600 font-medium">psycholog</p>
+                    </div>
+                </div>
+
+                <!-- Person 22 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/e9249124922fe17c0e8a4a758178d31e_w.png" alt="Lek. Ewa Pykosz-Władyka" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Ewa Pykosz-Władyka</h3>
+                        <p class="text-blue-600 font-medium">specjalista radiologii i diagnostyki obrazowej</p>
+                    </div>
+                </div>
+
+                <!-- Person 23 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/be0435f698d21264f14c34d36fe5886f_m.png" alt="lek. med. Sabina Stanisławczyk" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Sabina Stanisławczyk</h3>
+                        <p class="text-blue-600 font-medium">specjalista dermatologii i wenerologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 24 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="lek. med. Paweł Złotek" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Paweł Złotek</h3>
+                        <p class="text-blue-600 font-medium">specjalista chirurgii naczyniowej, onkologicznej oraz ogólnej</p>
+                    </div>
+                </div>
+
+                <!-- Person 25 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/0aac820df12ea02599f2940894d1603d_m.png" alt="lek. med. Krzysztof Badowski" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Krzysztof Badowski</h3>
+                        <p class="text-blue-600 font-medium">specjalista ortopedii i traumatologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 26 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/36409549cca2177d963f565a194fc110_w.png" alt="lek. med. Mariusz Szepelak" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Mariusz Szepelak</h3>
+                        <p class="text-blue-600 font-medium">specjalista chorób wewnętrznych i zakaźnych</p>
+                    </div>
+                </div>
+
+                <!-- Person 27 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="lek. Aneta Gierlach" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Aneta Gierlach</h3>
+                        <p class="text-blue-600 font-medium">Lekarz w trakcie specjalizacji z Radiologii i Diagnostyki Obrazowej</p>
+                    </div>
+                </div>
+
+                <!-- Person 28 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/461cace1cf064b7d82731f69ba41ac0a_EG9A3662.1.1.jpg" alt="LEK. MED. MICHAŁ GOŁĄB" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Michał Gołąb</h3>
+                        <p class="text-blue-600 font-medium">specjalista ortopedii i traumatologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 29 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/36409549cca2177d963f565a194fc110_w.png" alt="LEK. MED. ŁUKASZ ŚWIST" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Łukasz Świst</h3>
+                        <p class="text-blue-600 font-medium">specjalista ortopedii i traumatologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 30 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="lek. med. Małgorzata Markowska-Olszewska" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Małgorzata Markowska-Olszewska</h3>
+                        <p class="text-blue-600 font-medium">specjalista neurolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 31 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/d7cdbb87d3f01fe4393c0a2b32ef0d21_1.png" alt="LEK. Wojciech Stopyra" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Wojciech Stopyra</h3>
+                        <p class="text-blue-600 font-medium">specjalista chirurgii szczękowo-twarzowej</p>
+                    </div>
+                </div>
+
+                <!-- Person 32 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/36409549cca2177d963f565a194fc110_w.png" alt="lek. Anna Leśniak" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Anna Leśniak</h3>
+                        <p class="text-blue-600 font-medium">specjalista chirurgii stomatologicznej</p>
+                    </div>
+                </div>
+
+                <!-- Person 33 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/0c84c71d63e9380d175fee95ebc6876e_w.png" alt="mgr Magdalena chmura" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">mgr Magdalena Chmura</h3>
+                        <p class="text-blue-600 font-medium">fizjoterapia, osteopatia</p>
+                    </div>
+                </div>
+
+                <!-- Person 34 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/5ce5041352fc058a352d33ccb48a7c3a_w.png" alt="lek. Zuzanna Baraś" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Zuzanna Baraś</h3>
+                        <p class="text-blue-600 font-medium">specjalista radiologii i diagnostyki obrazowej</p>
+                    </div>
+                </div>
+
+                <!-- Person 35 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/45ab2cbe243cac9a4b4aeccc6527e5cf_2.png" alt="lek. med. Joanna Paczosa" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Joanna Paczosa</h3>
+                        <p class="text-blue-600 font-medium">specjalista medycyny pracy, medycyny rodzinnej</p>
+                    </div>
+                </div>
+
+                <!-- Person 36 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="Lek. Łukasz Władyka" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Łukasz Władyka</h3>
+                        <p class="text-blue-600 font-medium">specjalista radiologii i diagnostyki obrazowej</p>
+                    </div>
+                </div>
+
+                <!-- Person 37 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/58d49d31d8baf7cb762ed3dd9d18ddc2_m.png" alt="lek. MED. Paweł Janowski" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Paweł Janowski</h3>
+                        <p class="text-blue-600 font-medium">specjalista kardiolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 38 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/36409549cca2177d963f565a194fc110_w.png" alt="lek. med. Rafał Rydzyk" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Rafał Rydzyk</h3>
+                        <p class="text-blue-600 font-medium">Lekarz w trakcie specjalizacji z Radiologii i Diagnostyki Obrazowej</p>
+                    </div>
+                </div>
+
+                <!-- Person 39 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="lek. Szetela Natalia" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Natalia Szetela</h3>
+                        <p class="text-blue-600 font-medium">Lekarz w trakcie specjalizacji z Radiologii i Diagnostyki Obrazowej</p>
+                    </div>
+                </div>
+
+                <!-- Person 40 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/58d49d31d8baf7cb762ed3dd9d18ddc2_m.png" alt="lek. Wojciech Kowalewski" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Wojciech Kowalewski</h3>
+                        <p class="text-blue-600 font-medium">specjalista chirurgii ogólnej</p>
+                    </div>
+                </div>
+
+                <!-- Person 41 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/c4b8ac078142a313d58e638872a9b98e_2.png" alt="LEK. MED. MACIEJ OKONIEWSKI" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Maciej Okoniewski</h3>
+                        <p class="text-blue-600 font-medium">specjalista ortopedii i traumatologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 42 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/9d33c59b35f54d2a0c7bc1dd9c392f47_1.png" alt="LEK. MED. MACIEJ INGLOT" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. med. Maciej Inglot</h3>
+                        <p class="text-blue-600 font-medium">specjalista anestezjologii i intensywnej terapii</p>
+                    </div>
+                </div>
+
+                <!-- Person 43 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/52a51281d4914c09ce0b4740dcceac9a_1.png" alt="lek. Agnieszka Wiśniowska" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Agnieszka Wiśniowska</h3>
+                        <p class="text-blue-600 font-medium">specjalista anestezjologii i intensywnej terapii</p>
+                    </div>
+                </div>
+
+                <!-- Person 44 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/36409549cca2177d963f565a194fc110_w.png" alt="lek. Magdalena Malinowska - Knurek" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Magdalena Malinowska - Knurek</h3>
+                        <p class="text-blue-600 font-medium">specjalista anestezjologii i intensywnej terapii</p>
+                    </div>
+                </div>
+
+                <!-- Person 45 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/Alicja-Hejnar-Hajduk.jpg" alt="lek. Alicja Hejnar - Hajduk" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Alicja Hejnar - Hajduk</h3>
+                        <p class="text-blue-600 font-medium">specjalista anestezjologii i intensywnej terapii</p>
+                    </div>
+                </div>
+
+                <!-- Person 46 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/9d33c59b35f54d2a0c7bc1dd9c392f47_1.png" alt="lek. Joanna Siedlecka" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Joanna Siedlecka</h3>
+                        <p class="text-blue-600 font-medium">specjalista kardiolog</p>
+                    </div>
+                </div>
+
+                <!-- Person 47 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/e1221d332b9a59af89f90a853103f1a7_1.png" alt="lek. Aleksandra Kupaj" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Aleksandra Kupaj</h3>
+                        <p class="text-blue-600 font-medium">specjalista pediatrii</p>
+                    </div>
+                </div>
+
+                <!-- Person 48 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/9d33c59b35f54d2a0c7bc1dd9c392f47_1.png" alt="lek. Bartosz Kupaj" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Bartosz Kupaj</h3>
+                        <p class="text-blue-600 font-medium">specjalista gastroenterologii</p>
+                    </div>
+                </div>
+
+                <!-- Person 49 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/52a51281d4914c09ce0b4740dcceac9a_1.png" alt="lek. Agnieszka Telinga" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Agnieszka Telinga</h3>
+                        <p class="text-blue-600 font-medium">specjalista chirurgii stomatologicznej</p>
+                    </div>
+                </div>
+
+                <!-- Person 50 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/c7471d77f818d227e733a2021f05d937_w.png" alt="Jolanta Maria Dubiel" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Jolanta Maria Dubiel</h3>
+                        <p class="text-blue-600 font-medium">pielęgniarka anestezjologiczna</p>
+                    </div>
+                </div>
+
+                <!-- Person 51 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/9d33c59b35f54d2a0c7bc1dd9c392f47_1.png" alt="Alicja Kłosowicz" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Alicja Kłosowicz</h3>
+                        <p class="text-blue-600 font-medium">pielęgniarka anestezjologiczna</p>
+                    </div>
+                </div>
+
+                <!-- Person 52 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/8e1547719db3b51fae996f14a3b6a270_1.png" alt="TERESA ZYCH" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Teresa Zych</h3>
+                        <p class="text-blue-600 font-medium">pielęgniarka anestezjologiczna</p>
+                    </div>
+                </div>
+
+                <!-- Person 53 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/5aa61a74c1f315c7ce916272c9ae9635_6.png" alt="lek. Krzysztof Wanowicz" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. Krzysztof Wanowicz</h3>
+                        <p class="text-blue-600 font-medium">specjalista anestezjologii i intensywnej terapii</p>
+                    </div>
+                </div>
+
+                <!-- Person 54 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/images/36409549cca2177d963f565a194fc110_w.png" alt="lek. dent. Marta Morańda – Urbanek" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">lek. dent. Marta Morańda – Urbanek</h3>
+                        <p class="text-blue-600 font-medium">konsultacje stomatologiczne</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontakt" class="bg-slate-900 text-white pt-24 pb-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">MT</div>
+                        <span class="font-bold text-xl tracking-tight">Medic</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Klinika MT Medic to miejsce, w którym doświadczeni specjaliści koncentrują się na zapewnieniu usług na najwyższym poziomie.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Kontakt</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            ul. Korczyńska 43, 38-400 Krosno
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            (13) 433 23 00 / 537 277 266
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            kontakt@mtmedic.pl
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Szybkie linki</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#" class="hover:text-white transition">Polityka prywatności</a></li>
+                        <li><a href="#" class="hover:text-white transition">Standardy ochrony dzieci</a></li>
+                        <li><a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-white transition">Odbiór wyników badań</a></li>
+                        <li><a href="index.html#wyroby" class="hover:text-white transition">Wyroby medyczne</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>© 2026 MT MEDIC. Wszelkie prawa zastrzeżone. Kopiowanie treści zabronione.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
