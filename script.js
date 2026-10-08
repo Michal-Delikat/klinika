@@ -204,6 +204,37 @@ class SpecialistProfile extends HTMLElement {
 }
 customElements.define('specialist-profile', SpecialistProfile);
 
+class ServicesGrid extends HTMLElement {
+    connectedCallback() {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.render(), { once: true });
+        } else {
+            this.render();
+        }
+    }
+
+    render() {
+        if (this.rendered) return;
+        this.rendered = true;
+
+        const title = this.getAttribute('title') || 'Zakres Usług i Zabiegów';
+        const children = [...this.children];
+
+        this.innerHTML = `
+            <section class="py-20 px-4">
+                <div class="max-w-7xl mx-auto">
+                    <h3 class="text-2xl font-medium text-center text-slate-900 mb-12">${title}</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-grid></div>
+                </div>
+            </section>
+        `;
+
+        const grid = this.querySelector('[data-grid]');
+        children.forEach(child => grid.appendChild(child));
+    }
+}
+customElements.define('services-grid', ServicesGrid);
+
 class ServiceCard extends HTMLElement {
     connectedCallback() {
         const title = this.getAttribute('title');
