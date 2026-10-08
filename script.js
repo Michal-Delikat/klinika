@@ -123,7 +123,14 @@ class MainFooter extends HTMLElement {
                         <div>
                             <h4 class="text-lg font-bold mb-6">Zewnętrzne linki</h4>
                             <ul class="space-y-4 text-slate-400">
-                                <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+                                <li>
+                                    <a href="https://www.facebook.com/people/MT-Medic-Specjalistyczna-Praktyka-Lekarska/" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2" aria-label="Facebook">
+                                        <svg class="h-5 w-5 text-premium-accent shrink-0 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7v-7h-2v-3h2V9.5C12 7.57 13.57 6 15.5 6H18v3h-2.5C15.22 9 15 9.22 15 9.5V11h3l-0.5 3H15v7h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
+                                        </svg>
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
