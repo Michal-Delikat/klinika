@@ -6,13 +6,17 @@ class SpecialtyLink extends HTMLElement {
         const highlighted = this.hasAttribute('highlighted');
 
         const styles = highlighted 
-            ? "col-span-2 p-6 bg-premium-accent/20 rounded-2xl border-2 border-premium-accent hover:bg-premium-accent/30 transition cursor-pointer text-white font-bold text-xl" 
+            ? "p-6 bg-premium-accent/20 rounded-2xl border-2 border-premium-accent hover:bg-premium-accent/30 transition cursor-pointer text-white font-bold text-xl" 
             : "p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white";
 
+        if (highlighted) {
+            this.classList.add('col-span-2');
+        }
+
         this.innerHTML = `
-            <a href="${href}" class="flex items-center gap-3 ${styles}">
+            <a href="${href}" class="flex items-center gap-3 w-full h-full min-w-0 ${styles}">
                 ${icon ? `<i data-lucide="${icon}" class="w-5 h-5 ${highlighted ? 'w-6 h-6' : ''} text-premium-accent shrink-0"></i>` : ''}
-                <span>${text}</span>
+                <span class="min-w-0 break-words">${text}</span>
             </a>
         `;
         

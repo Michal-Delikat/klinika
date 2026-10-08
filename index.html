@@ -52,7 +52,7 @@
                 <p class="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
                     Do każdego pacjenta podchodzimy w sposób indywidualny, oferując optymalne leczenie w najwyższym standardzie.
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <div class="flex flex-wrap gap-4 justify-start">
                     <a href="#kontakt" class="bg-premium-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-90 transition shadow-lg shadow-premium-accent/20">Umów się na wizytę</a>
                     <a href="#specjalnosci-list" class="bg-white text-premium-accent border border-premium-accent/30 px-8 py-4 rounded-xl font-semibold hover:bg-premium-accent/5 transition">Zobacz specjalności</a>
                 </div>
@@ -87,7 +87,7 @@
     </section>
 
     <!-- All Specialties List -->
-    <section id="specjalnosci-list" class="py-24 px-4 bg-premium-dark text-white">
+    <section id="specjalnosci-list" class="lg:py-24 py-12 px-4 bg-premium-dark text-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-medium text-white mb-4">Wszystkie Specjalności</h2>
@@ -126,10 +126,17 @@
 
     <!-- Punkt Pobran Section -->
     <section id="punkt-pobran" class="py-24 px-4 bg-slate-50">
-        <div class="max-w-4xl mx-auto bg-white p-12 rounded-3xl border border-slate-100 shadow-sm text-center">
-            <h2 class="text-3xl font-medium text-slate-900 mb-4">Punkt pobrań</h2>
-            <p class="text-lg text-slate-600 mb-8">Zapewniamy szybką i profesjonalną obsługę pobrań materiałów do badań.</p>
-            <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="inline-block bg-premium-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-90 transition shadow-lg shadow-premium-accent/20">Odbiór wyników badań</a>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="relative z-10 border-2 lg:rounded-3xl border-dashed border-slate-200 w-full aspect-square flex items-center justify-center bg-slate-50">
+                    <span class="text-slate-400 font-medium italic">Miejsce na zdjęcie</span>
+                </div>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white p-12 rounded-3xl border border-slate-100 shadow-sm text-center lg:text-left">
+                <h2 class="text-3xl font-medium text-slate-900 mb-4">Punkt pobrań</h2>
+                <p class="text-lg text-slate-600 mb-8">Zapewniamy szybką i profesjonalną obsługę pobrań materiałów do badań.</p>
+                <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="inline-block bg-premium-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-90 transition shadow-lg shadow-premium-accent/20">Odbiór wyników badań</a>
+            </div>
         </div>
     </section>
 
