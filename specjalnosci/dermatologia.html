@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dermatologia - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
+                        blue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#8bc4f9',
+                            400: '#60a5f2',
+                            500: '#3b8edb',
+                            600: '#2c74b8',
+                            700: '#225d94',
+                            800: '#1c4d7a',
+                            900: '#174164',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <top-bar></top-bar>
+    <main-nav></main-nav>
+    
+    <!-- Header Section -->
+    <specialist-header 
+        title="Dermatologia" 
+        description="Profesjonalna diagnostyka i leczenie chorób skóry u dzieci i dorosłych oraz nowoczesne zabiegi medycyny estetycznej.">
+    </specialist-header>
+
+    <!-- Specialists Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+            <specialist-profile 
+                name="lek. med. Anna Rajchel" 
+                specialty="specjalista dermatologii i wenerologii" 
+                image="assets/images/dermatologia1.jpg" 
+                description="Specjalistka w dziedzinie dermatologii i wenerologii, oferująca kompleksową opiekę nad zdrowiem skóry.">
+            </specialist-profile>
+            <specialist-profile 
+                name="lek. med. Sabina Stanisławczyk" 
+                specialty="specjalista dermatologii i wenerologii" 
+                image="assets/images/dermatologia2.jpg" 
+                description="Doświadczona specjalistka dermatolog, koncentrująca się na diagnostyce i leczeniu schorzeń skóry.">
+            </specialist-profile>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <services-grid>
+        <service-card title="Leczenie chorób skóry" description="Diagnostyka i terapia trądziku, łuszczycy, atopowego zapalenia skóry oraz chorób alergicznych."></service-card>
+        <service-card title="Nowotwory skóry" description="Profesjonalna diagnostyka i leczenie znamion barwnikowych oraz nowotworów skóry."></service-card>
+        <service-card title="Leczenie łysienia i nadpotliwości" description="Specjalistyczne podejście do problemów z wypadaniem włosów oraz nadmierną potliwością."></service-card>
+        <service-card title="Mezoterapia" description="Zabiegi nawilżające i regenerujące strukturę skóry."></service-card>
+        <service-card title="Osocze bogatopłytkowe" description="Naturalna regeneracja skóry z wykorzystaniem krwi pacjenta."></service-card>
+        <service-card title="Toksyna botulinowa" description="Redukcja zmarszczek i poprawa napięcia skóry."></service-card>
+        <service-card title="Peelingi medyczne" description="Głęboka regeneracja kolorytu i struktury skóry."></service-card>
+        <service-card title="Pelleve" description="Bezbolesny, niechirurgiczny lifting twarzy wykorzystujący technologię fal radiowych."></service-card>
+    </services-grid>
+
+    <!-- Footer -->
+    <main-footer></main-footer>
+
+</body>
+</html>

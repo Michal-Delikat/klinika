@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietetyka - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
+                        blue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#8bc4f9',
+                            400: '#60a5f2',
+                            500: '#3b8edb',
+                            600: '#2c74b8',
+                            700: '#225d94',
+                            800: '#1c4d7a',
+                            900: '#174164',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <top-bar></top-bar>
+    <main-nav></main-nav>
+    
+    <!-- Header Section -->
+    <specialist-header 
+        title="Dietetyka" 
+        description="Indywidualne podejście do żywienia, wsparcie w walce z chorobami cywilizacyjnymi oraz profesjonalna opieka dietetyczna dla każdego etapu życia.">
+    </specialist-header>
+
+    <!-- Specialist Section -->
+    <section class="py-12 px-4">
+        <specialist-profile 
+            name="Anna Wargacka" 
+            specialty="dietetyk kliniczny, psychodietetyk" 
+            image="assets/images/dietetyka.jpg" 
+            description="Ekspertka w zakresie dietetyki klinicznej i psychodietetyki, specjalizująca się w leczeniu nadwagi, otyłości oraz doborze diet w jednostkach chorobowych.">
+        </specialist-profile>
+    </section>
+
+    <!-- Services Grid -->
+    <services-grid>
+        <service-card title="Leczenie nadwagi i otyłości" description="Kompleksowe wsparcie w redukcji masy ciała i zmianie nawyków żywieniowych."></service-card>
+        <service-card title="Dietetyka kliniczna" description="Indywidualnie dopasowane plany żywieniowe w chorobach cywilizacyjnych (cukrzyca typu II, insulinooporność, miażdżyca)."></service-card>
+        <service-card title="Diety w chorobach autoimmunologicznych" description="Specjalistyczne żywienie w przypadku Hashimoto oraz Celiakii."></service-card>
+        <service-card title="Dietoterapia onkologiczna" description="Wsparcie żywieniowe dla pacjentów w trakcie leczenia choroby nowotworowej."></service-card>
+        <service-card title="Zdrowie jelit" description="Plany dietetyczne w Zespole Jelita Drażliwego (IBS) oraz innych schorzeniach układu pokarmowego."></service-card>
+        <service-card title="Dietetyka pediatryczna" description="Wsparcie żywieniowe dla dzieci na każdym etapie rozwoju."></service-card>
+        <service-card title="Dietetyka dla kobiet w ciąży i par" description="Opieka dietetyczna ukierunkowana na zdrowie przyszłej mamy i dziecka."></service-card>
+        <service-card title="Psychodietetyka" description="Praca nad relacją z jedzeniem i psychologicznymi aspektami odżywiania."></service-card>
+    </services-grid>
+
+    <!-- External Link Section -->
+    <section class="py-12 px-4 text-center">
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+            <h3 class="text-xl font-medium text-slate-900 mb-4">Więcej informacji</h3>
+            <p class="text-slate-600 mb-6">Zapraszamy do odwiedzenia osobistej strony specjalisty, aby dowiedzieć się więcej o oferowanych usługach.</p>
+            <a href="https://dieto-med.pl/" target="_blank" rel="noopener" class="inline-block bg-premium-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-opacity-90 transition">Odwiedź dieto-med.pl</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <main-footer></main-footer>
+
+</body>
+</html>
