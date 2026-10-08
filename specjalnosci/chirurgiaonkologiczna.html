@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirurgia Onkologiczna - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
+                        blue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#8bc4f9',
+                            400: '#60a5f2',
+                            500: '#3b8edb',
+                            600: '#2c74b8',
+                            700: '#225d94',
+                            800: '#1c4d7a',
+                            900: '#174164',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <top-bar></top-bar>
+    <main-nav></main-nav>
+    
+    <!-- Header Section -->
+    <specialist-header 
+        title="Chirurgia Onkologiczna" 
+        description="Specjalistyczne leczenie operacyjne nowotworów, łączące precyzję chirurgiczną z kompleksową opieką nad pacjentem.">
+    </specialist-header>
+    
+    <!-- Specialist Section -->
+    <section class="py-12 px-4">
+        <specialist-profile 
+            name="lek. med. Marcin Paczosa" 
+            specialty="specjalista chirurgii onkologicznej" 
+            image="assets/images/bf02c63cab7f44d4aba4048739aeacc5_m.png" 
+            description="Specjalista w zakresie chirurgii onkologicznej, oferujący kompleksowe leczenie operacyjne nowotworów przewodu pokarmowego, trzustki, piersi, nerek, nadnerczy oraz skóry.">
+        </specialist-profile>
+    </section>
+    
+    <!-- Services Grid -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-2xl font-medium text-center text-slate-900 mb-12">Zakres Usług i Zabiegów</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Nowotwory przewodu pokarmowego</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Leczenie operacyjne nowotworów żołądka, jelita cienkiego oraz jelita grubego (w tym odbytnicy).
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Chirurgia trzustki</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Specjalistyczne zabiegi operacyjne w obrębie trzustki.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Onkologia piersi</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Leczenie operacyjne nowotworów piersi z dbałością o efekt funkcjonalny i estetyczny.
+                    </p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Chirurgia nerek i nadnerczy</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Operacyjne usuwanie zmian nowotworowych z nerek i nadnerczy.
+                    </p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Onkologia skóry</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Chirurgiczne usuwanie nowotworów skóry z odpowiednim marginesem bezpieczeństwa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <main-footer></main-footer>
+    
+</body>
+</html>

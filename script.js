@@ -38,7 +38,7 @@ class MainNav extends HTMLElement {
                     <div class="flex items-center gap-3">
                         <a href="${rootPrefix}index.html" class="flex items-center gap-3">
                             <img src="${rootPrefix}assets/images/logo.png" alt="MT Medic Logo" class="h-16 w-auto">
-                            <span class="font-light text-1xl tracking-tighter text-slate-900 scale-y-110 origin-bottom">Centrum Medyczne MT Medic</span>
+                            <span class="font-light text-1xl md:text-2xl tracking-tighter text-slate-900 scale-y-110 origin-bottom">Centrum Medyczne MT Medic</span>
                         </a>
                     </div>
                     <div class="hidden lg:flex items-center gap-6 font-medium text-slate-600">
@@ -158,6 +158,49 @@ class DoctorCard extends HTMLElement {
         `;
     }
 }
-
 customElements.define('doctor-card', DoctorCard);
+
+class SpecialistHeader extends HTMLElement {
+    connectedCallback() {
+        const title = this.getAttribute('title');
+        const description = this.getAttribute('description');
+        
+        this.innerHTML = `
+            <section class="pt-20 pb-12 px-4 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm mb-4 block">Specjalności Medyczne</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium text-slate-900 mb-6">${title}</h1>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                        ${description}
+                    </p>
+                </div>
+            </section>
+        `;
+    }
+}
+customElements.define('specialist-header', SpecialistHeader);
+
+class SpecialistProfile extends HTMLElement {
+    connectedCallback() {
+        const name = this.getAttribute('name');
+        const specialty = this.getAttribute('specialty');
+        const image = this.getAttribute('image');
+        const description = this.getAttribute('description');
+
+        this.innerHTML = `
+            <div class="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-100 shadow-sm p-4 md:p-8 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-48 h-48 rounded-2xl overflow-hidden shadow-lg shrink-0 bg-slate-100 flex items-center justify-center relative">
+                    <img src="${image}" alt="${name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-medium text-slate-900 mb-2">${name}</h2>
+                    <p class="text-premium-accent font-medium text-lg mb-4">${specialty}</p>
+                    <p class="text-slate-600 leading-relaxed">${description}</p>
+                </div>
+            </div>
+        `;
+    }
+}
+customElements.define('specialist-profile', SpecialistProfile);
 
