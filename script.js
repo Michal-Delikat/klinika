@@ -6,8 +6,8 @@ class SpecialtyLink extends HTMLElement {
         const highlighted = this.hasAttribute('highlighted');
 
         const styles = highlighted 
-            ? "p-6 bg-premium-accent/20 rounded-2xl border-2 border-premium-accent hover:bg-premium-accent/30 transition cursor-pointer text-white font-bold text-xl" 
-            : "p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white";
+            ? "p-6 bg-premium-accent/20 rounded-2xl border-2 border-premium-accent hover:bg-premium-accent/30 transition cursor-pointer text-white font-bold text-sm" 
+            : "p-4 bg-white/10 rounded-xl border border-white/10 hover:border-premium-accent hover:bg-white/20 transition cursor-pointer text-white text-sm";
 
         if (highlighted) {
             this.classList.add('col-span-2');
@@ -37,13 +37,13 @@ class TopBar extends HTMLElement {
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
-                            (13) 433 23 00
+                            <a href="tel:+48134332300" class="hover:underline">(13) 433 23 00</a>
                         </span>
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                             </svg>
-                            537 277 266
+                            <a href="tel:+48537277266" class="hover:underline">537 277 266</a>
                         </span>
                     </div>
                     <div class="text-right">
@@ -74,7 +74,7 @@ class MainNav extends HTMLElement {
                         <a href="${rootPrefix}onas.html" class="hover:text-premium-accent transition">O nas</a>
                         <a href="${rootPrefix}index.html#specjalnosci-list" class="hover:text-premium-accent transition">Specjalności</a>
                         <a href="${rootPrefix}index.html#wyroby" class="hover:text-premium-accent transition">Wyroby Medyczne</a>
-                        <a href="${rootPrefix}index.html#stomatologia" class="hover:text-premium-accent transition">Stomatologia</a>
+                        <a href="${rootPrefix}stomatologia.html" class="hover:text-premium-accent transition">Stomatologia</a>
                         <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-premium-accent transition">Punkt pobrań</a>
                         <a href="${rootPrefix}index.html#kontakt" class="bg-premium-accent text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition">Kontakt</a>
                     </div>
@@ -89,7 +89,7 @@ class MainNav extends HTMLElement {
                     <a href="${rootPrefix}onas.html" class="hover:text-premium-accent transition">O nas</a>
                     <a href="${rootPrefix}index.html#specjalnosci-list" class="hover:text-premium-accent transition">Specjalności</a>
                     <a href="${rootPrefix}index.html#wyroby" class="hover:text-premium-accent transition">Wyroby Medyczne</a>
-                    <a href="${rootPrefix}index.html#stomatologia" class="hover:text-premium-accent transition">Stomatologia</a>
+                    <a href="${rootPrefix}stomatologia.html" class="hover:text-premium-accent transition">Stomatologia</a>
                     <a href="https://www.wyniki-dilab.com.pl/" target="_blank" class="hover:text-premium-accent transition">Punkt pobrań</a>
                     <a href="${rootPrefix}index.html#kontakt" class="bg-premium-accent text-white px-4 py-2 rounded-full text-center hover:bg-opacity-90 transition">Kontakt</a>
                 </div>
@@ -125,24 +125,24 @@ class MainFooter extends HTMLElement {
                     <div class="grid md:grid-cols-3 gap-12 mb-16">
                         <div>
                             <h4 class="text-lg font-bold mb-6">Kontakt</h4>
-                            <ul class="space-y-4 text-slate-400">
+                            <ul class="space-y-4 text-slate-400 lg:text-lg">
                                 <li class="flex items-start gap-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-premium-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                     ul. Korczyńska 43, 38-400 Krosno
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-premium-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                                    (13) 433 23 00 / 537 277 266
+                                    <span><a href="tel:+48134332300" class="hover:text-white transition">(13) 433 23 00</a> / <a href="tel:+48537277266" class="hover:text-white transition">537 277 266</a></span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-premium-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                    kontakt@mtmedic.pl
+                                    <a href="mailto:kontakt@mtmedic.pl" class="hover:text-white transition">kontakt@mtmedic.pl</a>
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <h4 class="text-lg font-bold mb-6">Szybkie linki</h4>
-                            <ul class="space-y-4 text-slate-400">
+                            <ul class="space-y-4 text-slate-400 lg:text-lg">
                                 <li><a href="#" class="hover:text-white transition">Polityka prywatności</a></li>
                                 <li><a href="#" class="hover:text-white transition">Standardy ochrony dzieci</a></li>
                                 <li><a href="#" class="hover:text-white transition">Odbiór wyników badań</a></li>
@@ -151,7 +151,7 @@ class MainFooter extends HTMLElement {
                         </div>
                         <div>
                             <h4 class="text-lg font-bold mb-6">Zewnętrzne linki</h4>
-                            <ul class="space-y-4 text-slate-400">
+                            <ul class="space-y-4 text-slate-400 lg:text-lg">
                                 <li>
                                     <a href="https://www.facebook.com/profile.php?id=100057461018931" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2">
                                         <svg class="h-5 w-5 text-premium-accent shrink-0 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -181,12 +181,12 @@ class DoctorCard extends HTMLElement {
         const image = this.getAttribute('image');
 
         this.innerHTML = `
-            <div class="bg-white p-3 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-6">
-                <div class="w-32 h-32 rounded-2xl overflow-hidden shrink-0 bg-slate-100 flex items-center justify-center relative">
+            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                <div class="w-full aspect-[3/4] overflow-hidden bg-slate-100 flex items-center justify-center relative">
                     <img src="${image}" alt="${name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
                 </div>
-                <div>
+                <div class="p-4">
                     <h3 class="text-lg font-medium text-slate-900">${name}</h3>
                     <p class="text-premium-accent font-medium">${specialty}</p>
                 </div>
@@ -224,12 +224,12 @@ class SpecialistProfile extends HTMLElement {
         const description = this.getAttribute('description');
 
         this.innerHTML = `
-            <div class="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-100 shadow-sm p-4 md:p-8 flex flex-col md:flex-row items-center gap-12">
-                <div class="w-48 h-48 rounded-2xl overflow-hidden shadow-lg shrink-0 bg-slate-100 flex items-center justify-center relative">
+            <div class="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+                <div class="w-full aspect-[16/9] overflow-hidden bg-slate-100 flex items-center justify-center relative">
                     <img src="${image}" alt="${name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
                 </div>
-                <div>
+                <div class="p-8">
                     <h2 class="text-2xl font-medium text-slate-900 mb-2">${name}</h2>
                     <p class="text-premium-accent font-medium text-lg mb-4">${specialty}</p>
                     <p class="text-slate-600 leading-relaxed">${description}</p>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stomatologia - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
+                        blue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#8bc4f9',
+                            400: '#60a5f2',
+                            500: '#3b8edb',
+                            600: '#2c74b8',
+                            700: '#225d94',
+                            800: '#1c4d7a',
+                            900: '#174164',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <top-bar></top-bar>
+    <main-nav></main-nav>
+
+    <!-- Header Section -->
+    <specialist-header
+        title="Stomatologia"
+        description="Kompleksowe leczenie stomatologiczne w znieczuleniu ogólnym i miejscowym oraz diagnostyka obrazowa w nowoczesnej pracowni pantomograficznej.">
+    </specialist-header>
+
+    <!-- Doctors Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <specialist-profile
+                name="lek. stom. Marta Morańda – Urbanek"
+                specialty="stomatolog"
+                image="assets/images/stomatologia1.jpg"
+                description="Specjalistka prowadząca konsultacje i zabiegi leczenia zębów w znieczuleniu ogólnym.">
+            </specialist-profile>
+            <specialist-profile
+                name="lek. Agnieszka Telinga"
+                specialty="specjalista chirurgii stomatologicznej"
+                image="assets/images/stomatologia2.jpg"
+                description="Specjalistka chirurgii stomatologicznej wykonująca zabiegi usunięcia zębów zatrzymanych w znieczuleniu miejscowym.">
+            </specialist-profile>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <services-grid>
+        <service-card title="Stomatologia w znieczuleniu ogólnym" description="Zabiegi leczenia zębów w znieczuleniu ogólnym (tzw. narkozie), polecane pacjentom z dentofobią oraz dzieciom, które nie współpracują ze stomatologiem. Zabieg poprzedzony jest konsultacją, podczas której lek. stom. Marta Morańda – Urbanek oceni stan uzębienia i przedstawi propozycję leczenia."></service-card>
+        <service-card title="Stomatologia w znieczuleniu miejscowym" description="Zabiegi usunięcia zęba zatrzymanego w znieczuleniu miejscowym, prowadzone przez specjalistę chirurgii stomatologicznej. Konsultacje i zabiegi wykonywane są w środy."></service-card>
+        <service-card title="Pantomogram" description="Badanie panoramiczne wykonywane na miejscu w naszej pracowni pantomograficznej. Zdjęcie rtg pozwala na dokładną ocenę stanu uzębienia i wykorzystywane jest w stomatologii oraz chirurgii szczękowo-twarzowej."></service-card>
+    </services-grid>
+
+    <!-- Registration Section -->
+    <section class="py-12 px-4 text-center">
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+            <h3 class="text-xl font-medium text-slate-900 mb-4">Rejestracja na badanie pantomograficzne</h3>
+            <p class="text-slate-600">Zadzwoń pod numery: <a href="tel:+48134332300" class="text-premium-accent font-medium">(13) 433 23 00</a> lub <a href="tel:+48537277266" class="text-premium-accent font-medium">537 277 266</a>.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <main-footer></main-footer>
+
+</body>
+</html>
