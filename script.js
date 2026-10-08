@@ -204,3 +204,19 @@ class SpecialistProfile extends HTMLElement {
 }
 customElements.define('specialist-profile', SpecialistProfile);
 
+class ServiceCard extends HTMLElement {
+    connectedCallback() {
+        const title = this.getAttribute('title');
+        const description = this.getAttribute('description');
+        
+        this.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <h4 class="text-lg font-bold text-slate-900 mb-3">${title}</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    ${description}
+                </p>
+            </div>
+        `;
+    }
+}
+customElements.define('service-card', ServiceCard);
