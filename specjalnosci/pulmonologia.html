@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulmonologia - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
+                        blue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#8bc4f9',
+                            400: '#60a5f2',
+                            500: '#3b8edb',
+                            600: '#2c74b8',
+                            700: '#225d94',
+                            800: '#1c4d7a',
+                            900: '#174164',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <top-bar></top-bar>
+    <main-nav></main-nav>
+
+    <!-- Header Section -->
+    <specialist-header
+        title="Pulmonologia"
+        description="Diagnostyka i leczenie ostrych i przewlekłych chorób płuc.">
+    </specialist-header>
+
+    <!-- Specialist Section -->
+    <section class="py-12 px-4">
+        <specialist-profile
+            name="lek. med. Agnieszka Skrupska-Stefaniak"
+            specialty="specjalista chorób wewnętrznych, specjalista chorób płuc"
+            image="assets/images/c69cf025b2a6739651f148a0a7968b96_w.png"
+            description="Specjalista chorób wewnętrznych oraz chorób płuc, zajmująca się diagnostyką i leczeniem ostrych i przewlekłych chorób płuc.">
+        </specialist-profile>
+    </section>
+
+    <!-- Conditions Grid -->
+    <services-grid title="Konsultacje z zakresu diagnostyki i leczenia ostrych i przewlekłych chorób płuc">
+        <service-card title="astma oskrzelowa"></service-card>
+        <service-card title="przewlekła obturacyjna choroba płuc"></service-card>
+        <service-card title="zapalenia oskrzeli i płuc"></service-card>
+        <service-card title="przewlekły kaszel"></service-card>
+        <service-card title="gruźlica płuc i pozapłucna"></service-card>
+        <service-card title="sarkoidoza"></service-card>
+        <service-card title="inne choroby śródmiąższowe płuc"></service-card>
+        <service-card title="zatorowość płucna"></service-card>
+    </services-grid>
+
+    <!-- Footer -->
+    <main-footer></main-footer>
+
+</body>
+</html>

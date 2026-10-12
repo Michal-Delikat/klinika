@@ -58,7 +58,7 @@ class TopBar extends HTMLElement {
 class MainNav extends HTMLElement {
     connectedCallback() {
         // Detect if we are in a subdirectory to adjust links
-        const isSubdir = /\/(specjalnosci|lekarze)\//.test(window.location.pathname);
+        const isSubdir = /\/(specjalnosci|lekarze|uslugi)\//.test(window.location.pathname);
         const rootPrefix = isSubdir ? '../' : '';
         
         this.innerHTML = `
@@ -116,7 +116,7 @@ customElements.define('main-nav', MainNav);
 
 class MainFooter extends HTMLElement {
     connectedCallback() {
-        const isSubdir = /\/(specjalnosci|lekarze)\//.test(window.location.pathname);
+        const isSubdir = /\/(specjalnosci|lekarze|uslugi)\//.test(window.location.pathname);
         const rootPrefix = isSubdir ? '../' : '';
         
         this.innerHTML = `
@@ -303,7 +303,7 @@ class ServicesGrid extends HTMLElement {
             <section class="py-20 px-4">
                 <div class="max-w-7xl mx-auto">
                     <h3 class="text-2xl font-medium text-center text-slate-900 mb-12">${title}</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-grid></div>
+                    <div class="grid auto-rows-fr md:grid-cols-2 lg:grid-cols-3 gap-6" data-grid></div>
                 </div>
             </section>
         `;
@@ -318,14 +318,25 @@ class ServiceCard extends HTMLElement {
     connectedCallback() {
         const title = this.getAttribute('title');
         const description = this.getAttribute('description');
-        
+        const href = this.getAttribute('href');
+
+        const tag = href ? 'a' : 'div';
+        const hrefAttr = href ? ` href="${href}"` : '';
+
         this.innerHTML = `
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                <h4 class="text-lg font-bold text-slate-900 mb-3">${title}</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
+            <${tag}${hrefAttr} class="flex flex-col h-full bg-white p-6 rounded-2xl border border-slate-100 shadow-sm ${href ? 'group hover:shadow-md transition' : ''}">
+                <h4 class="text-lg font-bold text-slate-900 ${description ? 'mb-3' : ''}">${title}</h4>
+                ${description ? `<p class="text-slate-600 text-sm leading-relaxed">
                     ${description}
-                </p>
-            </div>
+                </p>` : ''}
+                ${href ? `
+                <div class="mt-auto pt-4 flex justify-end">
+                    <span class="inline-flex items-center gap-2 text-premium-accent font-semibold text-sm">
+                        Więcej
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                    </span>
+                </div>` : ''}
+            </${tag}>
         `;
     }
 }
