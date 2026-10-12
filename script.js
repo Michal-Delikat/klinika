@@ -179,18 +179,30 @@ class DoctorCard extends HTMLElement {
         const name = this.getAttribute('name');
         const specialty = this.getAttribute('specialty');
         const image = this.getAttribute('image');
+        const href = this.getAttribute('href');
+
+        const tag = href ? 'a' : 'div';
+        const hrefAttr = href ? ` href="${href}"` : '';
+        const clickable = href ? 'group block hover:shadow-md' : '';
 
         this.innerHTML = `
-            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition overflow-hidden">
+            <${tag}${hrefAttr} class="bg-white rounded-3xl border border-slate-100 shadow-sm transition overflow-hidden ${clickable}">
                 <div class="w-full aspect-[3/4] overflow-hidden bg-slate-100 flex items-center justify-center relative">
-                    <img src="${image}" alt="${name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <img src="${image}" alt="${name}" class="w-full h-full object-cover transition duration-300 ${href ? 'group-hover:scale-105' : ''}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
                 </div>
-                <div class="p-4">
+                <div class="p-4 pb-6">
                     <h3 class="text-lg font-medium text-slate-900">${name}</h3>
                     <p class="text-premium-accent font-medium">${specialty}</p>
+                    <div class="mt-3 flex justify-end min-h-[1.5rem]">
+                        ${href ? `
+                        <span class="inline-flex items-center gap-2 text-premium-accent font-semibold text-sm">
+                            Więcej
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                        </span>` : ''}
+                    </div>
                 </div>
-            </div>
+            </${tag}>
         `;
     }
 }
@@ -226,7 +238,7 @@ class SubHeader extends HTMLElement {
                 <div class="max-w-6xl mx-auto">
                     <a href="${href}" class="inline-flex items-center gap-2 text-premium-accent font-semibold hover:underline">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                        Wróć do ${content}
+                        ${content}
                     </a>
                 </div>
             </header>
@@ -241,19 +253,31 @@ class SpecialistProfile extends HTMLElement {
         const specialty = this.getAttribute('specialty');
         const image = this.getAttribute('image');
         const description = this.getAttribute('description');
+        const href = this.getAttribute('href');
+
+        const tag = href ? 'a' : 'div';
+        const hrefAttr = href ? ` href="${href}"` : '';
+        const clickable = href ? 'group block hover:shadow-md' : '';
 
         this.innerHTML = `
-            <div class="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+            <${tag}${hrefAttr} class="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-100 shadow-sm transition overflow-hidden ${clickable}">
                 <div class="w-full aspect-[16/9] overflow-hidden bg-slate-100 flex items-center justify-center relative">
-                    <img src="${image}" alt="${name}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <img src="${image}" alt="${name}" class="w-full h-full object-cover transition duration-300 ${href ? 'group-hover:scale-105' : ''}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
                 </div>
                 <div class="p-8">
                     <h2 class="text-2xl font-medium text-slate-900 mb-2">${name}</h2>
                     <p class="text-premium-accent font-medium text-lg mb-4">${specialty}</p>
                     <p class="text-slate-600 leading-relaxed">${description}</p>
+                    ${href ? `
+                    <div class="mt-6 flex justify-end">
+                        <span class="inline-flex items-center gap-2 text-premium-accent font-semibold">
+                            Więcej
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                        </span>
+                    </div>` : ''}
                 </div>
-            </div>
+            </${tag}>
         `;
     }
 }
