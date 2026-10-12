@@ -9,6 +9,26 @@ body {
     font-family: 'Outfit', sans-serif; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Keep the sticky nav working while letting the body be a flex container */
+main-nav {
+    display: contents;
+}
+
+/* Push the footer to the bottom on short pages */
+main-footer {
+    margin-top: auto;
+}
+
+@supports (min-height: 100dvh) {
+    body {
+        min-height: 100dvh;
+    }
 }
 
 h1, h2, h3, .font-outfit { 

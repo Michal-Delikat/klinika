@@ -58,7 +58,7 @@ class TopBar extends HTMLElement {
 class MainNav extends HTMLElement {
     connectedCallback() {
         // Detect if we are in a subdirectory to adjust links
-        const isSubdir = window.location.pathname.includes('/specjalnosci/');
+        const isSubdir = /\/(specjalnosci|lekarze)\//.test(window.location.pathname);
         const rootPrefix = isSubdir ? '../' : '';
         
         this.innerHTML = `
@@ -116,7 +116,7 @@ customElements.define('main-nav', MainNav);
 
 class MainFooter extends HTMLElement {
     connectedCallback() {
-        const isSubdir = window.location.pathname.includes('/specjalnosci/');
+        const isSubdir = /\/(specjalnosci|lekarze)\//.test(window.location.pathname);
         const rootPrefix = isSubdir ? '../' : '';
         
         this.innerHTML = `
@@ -215,6 +215,25 @@ class SpecialistHeader extends HTMLElement {
     }
 }
 customElements.define('specialist-header', SpecialistHeader);
+
+class SubHeader extends HTMLElement {
+    connectedCallback() {
+        const href = this.getAttribute('href') || '#';
+        const content = this.innerHTML;
+
+        this.innerHTML = `
+            <header class="px-4 pt-8">
+                <div class="max-w-6xl mx-auto">
+                    <a href="${href}" class="inline-flex items-center gap-2 text-premium-accent font-semibold hover:underline">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                        Wróć do ${content}
+                    </a>
+                </div>
+            </header>
+        `;
+    }
+}
+customElements.define('sub-header', SubHeader);
 
 class SpecialistProfile extends HTMLElement {
     connectedCallback() {

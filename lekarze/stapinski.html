@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dr n. med. Tomasz Stapiński - MT Medic Centrum Medyczne Krosno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            dark: 'rgb(29, 45, 77)',
+                            accent: 'rgb(204, 171, 118)',
+                            accentLight: 'rgba(204, 171, 118, 0.1)',
+                        },
+                        blue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#8bc4f9',
+                            400: '#60a5f2',
+                            500: '#3b8edb',
+                            600: '#2c74b8',
+                            700: '#225d94',
+                            800: '#1c4d7a',
+                            900: '#174164',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <top-bar></top-bar>
+    <main-nav></main-nav>
+
+    <!-- Subpage Header -->
+    <sub-header href="../specjalnosci/laryngologia.html">Laryngologia</sub-header>
+
+    <!-- Doctor Profile Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-[320px_1fr] gap-8 md:gap-12 items-start">
+            <!-- Photo placeholder -->
+            <div class="w-full aspect-[3/4] rounded-3xl overflow-hidden bg-slate-100 border border-slate-100 shadow-sm flex items-center justify-center relative">
+                <img src="../assets/images/8ac1caf46e50d342b242d053cf4fa145_m.png" alt="dr n. med. Tomasz Stapiński" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <span class="absolute inset-0 hidden items-center justify-center text-slate-400 font-medium italic">Zdjęcie</span>
+            </div>
+
+            <!-- Name and description -->
+            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm p-8">
+                <h1 class="text-3xl md:text-4xl font-medium text-slate-900 mb-2">dr n. med. Tomasz Stapiński</h1>
+                <p class="text-premium-accent font-medium text-lg mb-6">specjalista otorynolaryngolog</p>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Specjalista w dziedzinie otorynolaryngologii, zajmujący się diagnostyką i leczeniem chorób nosa, gardła oraz krtani. W naszej placówce prowadzi konsultacje laryngologiczne oraz kwalifikację do zabiegów operacyjnych.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    W zakresie wykonywanych zabiegów znajduje się m.in. rynoseptoplastyka funkcjonalna — operacja korekcji nosa i skrzywionej przegrody nosowej, a także septoplastyka poprawiająca drożność nosa i mogąca stanowić element leczenia obturacyjnego bezdechu sennego.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <main-footer></main-footer>
+
+</body>
+</html>
